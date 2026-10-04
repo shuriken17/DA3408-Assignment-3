@@ -1,0 +1,605 @@
+nohup: ignoring input
+ray: 2.59.0 | nodes: 2 | CPUs: 4.0 | udf: python | instrument: True
+2026-10-04 22:42:08,871	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aBVK52TGUYdicUyRt88_0. Full logs are in /tmp/ray/session_2026-10-04_22-40-41_950314_5614/logs/ray-data
+2026-10-04 22:42:08,871	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aBVK52TGUYdicUyRt88_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2->MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2->MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2->MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2->MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))]
+2026-10-04 22:42:08,881	INFO __init__.py:56 -- Progress will be logged because stdout is a non-interactive terminal.
+2026-10-04 22:42:09,025	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVK52TGUYdicUyRt88_0 =======
+2026-10-04 22:42:09,025	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:42:09,025	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-04 22:42:09,025	INFO logging_progress.py:181 -- 
+2026-10-04 22:42:09,025	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-04 22:42:09,027	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:09,027	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:09,027	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,027	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-04 22:42:09,027	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,027	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-04 22:42:09,028	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:09,028	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:42:19,048	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVK52TGUYdicUyRt88_0 =======
+2026-10-04 22:42:19,049	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:42:19,049	INFO logging_progress.py:227 -- Active & requested resources: 4/4 CPU, 192.0B/500.0MiB object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:181 -- 
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-04 22:42:19,049	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:19,049	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:42:29,233	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVK52TGUYdicUyRt88_0 =======
+2026-10-04 22:42:29,235	INFO logging_progress.py:225 -- Total Progress: 2913955/?
+2026-10-04 22:42:29,235	INFO logging_progress.py:227 -- Active & requested resources: 3/4 CPU, 158.4MiB/500.0MiB object store
+2026-10-04 22:42:29,235	INFO logging_progress.py:181 -- 
+2026-10-04 22:42:29,235	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:29,235	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:29,235	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:29,236	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:29,236	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:29,236	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:29,236	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 2913955/2913955
+2026-10-04 22:42:29,236	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 158.4MiB object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:29,237	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:29,237	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-04 22:42:29,237	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:231 -- ReadFilesParquetV2->MapBatches(canon): 0/1
+2026-10-04 22:42:29,237	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 2913955/1
+2026-10-04 22:42:29,237	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:29,237	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:42:32,158	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aBVK52TGUYdicUyRt88_0 execution finished in 23.29 seconds
+rows after ingest       12672737
+2026-10-04 22:42:32,483	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aBVvUVHvckD60f90gAu_0. Full logs are in /tmp/ray/session_2026-10-04_22-40-41_950314_5614/logs/ray-data
+2026-10-04 22:42:32,483	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aBVvUVHvckD60f90gAu_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(_add_bucket)] -> HashShuffleOperator[Shuffle(key_columns=('_bucket',), num_partitions=200)] -> TaskPoolMapOperator[MapBatches(_dedup_group)->MapBatches(drop_columns)]
+2026-10-04 22:42:32,562	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:42:32,563	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:42:32,564	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-04 22:42:32,564	INFO logging_progress.py:181 -- 
+2026-10-04 22:42:32,564	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 0/1
+2026-10-04 22:42:32,564	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 3 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:42:32,565	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 0/1
+2026-10-04 22:42:32,565	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:32,565	INFO logging_progress.py:231 --     - Shuffle: 0/1
+2026-10-04 22:42:32,565	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:42:32,565	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:42:32,565	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:42:32,565	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:42:36,077	INFO hash_shuffle.py:1662 -- Estimated memory requirement for shuffling aggregator (partitions=200, aggregators=4, dataset (estimate)=0.1GiB): shuffle=32.0MiB, output=32.0MiB, total_base=64.0MiB, shuffle_aggregator_memory_estimate_skew_factor=1.3, total_with_skew=83.2MiB
+2026-10-04 22:43:03,082	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:03,306	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:03,306	INFO logging_progress.py:227 -- Active & requested resources: 2/4 CPU, 640.0MiB/500.0MiB object store
+2026-10-04 22:43:03,306	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:03,306	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 1760233/1
+2026-10-04 22:43:03,439	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 2 (0.0B); Resources: 2.0 CPU, 640.0MiB object store
+2026-10-04 22:43:03,439	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 0/1
+2026-10-04 22:43:03,439	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.3GiB memory, 0.0B object store
+2026-10-04 22:43:03,439	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-04 22:43:03,439	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:03,439	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:03,439	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:03,439	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:43:13,160	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:13,165	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:13,165	INFO logging_progress.py:227 -- Active & requested resources: 3.24/4 CPU, 1.3GiB/2.0GiB memory, 640.0MiB/500.0MiB object store
+2026-10-04 22:43:13,165	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:13,165	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 1760233/1
+2026-10-04 22:43:13,165	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 2 (0.0B); Resources: 2.0 CPU, 640.0MiB object store
+2026-10-04 22:43:13,165	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 0/1
+2026-10-04 22:43:13,165	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.3GiB memory, 0.0B object store
+2026-10-04 22:43:13,166	INFO logging_progress.py:231 --     - Shuffle: 0/?
+2026-10-04 22:43:13,166	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:13,166	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:13,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:13,166	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:43:23,212	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:23,214	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:23,214	INFO logging_progress.py:227 -- Active & requested resources: 3.24/4 CPU, 1.3GiB/2.0GiB memory, 691.6MiB/500.0MiB object store
+2026-10-04 22:43:23,214	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:23,214	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 4653779/1
+2026-10-04 22:43:23,214	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 2 (0.0B); Resources: 2.0 CPU, 594.2MiB object store
+2026-10-04 22:43:23,214	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 2687218/1
+2026-10-04 22:43:23,214	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.3GiB memory, 97.4MiB object store
+2026-10-04 22:43:23,214	INFO logging_progress.py:231 --     - Shuffle: 2687218/?
+2026-10-04 22:43:23,215	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:23,215	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:23,215	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:23,215	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:43:33,376	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:33,381	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:33,381	INFO logging_progress.py:227 -- Active & requested resources: 3.24/4 CPU, 1.3GiB/2.0GiB memory, 691.6MiB/500.0MiB object store
+2026-10-04 22:43:33,381	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:33,381	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 4653779/1
+2026-10-04 22:43:33,381	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 2 (0.0B); Resources: 2.0 CPU, 594.2MiB object store
+2026-10-04 22:43:33,381	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 2687218/1
+2026-10-04 22:43:33,382	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.3GiB memory, 97.4MiB object store
+2026-10-04 22:43:33,382	INFO logging_progress.py:231 --     - Shuffle: 2687218/?
+2026-10-04 22:43:33,382	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:33,382	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:33,382	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:33,382	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:43:43,418	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:43,418	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:43,418	INFO logging_progress.py:227 -- Active & requested resources: 3.24/4 CPU, 1.4GiB/2.0GiB memory, 635.7MiB/500.0MiB object store
+2026-10-04 22:43:43,418	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:43,418	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 5833810/10748872
+2026-10-04 22:43:43,418	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 2 (0.0B); Resources: 1.0 CPU, 440.9MiB object store
+2026-10-04 22:43:43,418	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 2687218/1
+2026-10-04 22:43:43,418	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 2.2 CPU, 1.4GiB memory, 194.8MiB object store
+2026-10-04 22:43:43,418	INFO logging_progress.py:231 --     - Shuffle: 2687218/10748872
+2026-10-04 22:43:43,418	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:43,418	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:43,418	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:43,418	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:43:53,479	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:43:53,479	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:43:53,479	INFO logging_progress.py:227 -- Active & requested resources: 2.24/4 CPU, 1.3GiB/2.0GiB memory, 410.4MiB/500.0MiB object store
+2026-10-04 22:43:53,479	INFO logging_progress.py:181 -- 
+2026-10-04 22:43:53,479	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 5833810/11667620
+2026-10-04 22:43:53,479	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (0.0B); Resources: 1.0 CPU, 106.1MiB memory, 297.9MiB object store
+2026-10-04 22:43:53,479	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 4653779/1
+2026-10-04 22:43:53,479	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.2GiB memory, 112.4MiB object store
+2026-10-04 22:43:53,479	INFO logging_progress.py:231 --     - Shuffle: 4653779/10748872
+2026-10-04 22:43:53,479	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:43:53,479	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:43:53,479	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:43:53,479	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:03,563	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:03,563	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:03,564	INFO logging_progress.py:227 -- Active & requested resources: 2.24/4 CPU, 1.3GiB/2.0GiB memory, 410.4MiB/500.0MiB object store
+2026-10-04 22:44:03,564	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:03,564	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 5833810/11667620
+2026-10-04 22:44:03,564	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (0.0B); Resources: 1.0 CPU, 106.1MiB memory, 297.9MiB object store
+2026-10-04 22:44:03,564	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 4653779/1
+2026-10-04 22:44:03,564	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.2GiB memory, 112.4MiB object store
+2026-10-04 22:44:03,564	INFO logging_progress.py:231 --     - Shuffle: 4653779/10748872
+2026-10-04 22:44:03,564	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:44:03,564	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:03,564	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:03,564	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:13,629	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:13,630	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:13,630	INFO logging_progress.py:227 -- Active & requested resources: 1.24/4 CPU, 1.1GiB/2.0GiB memory, 212.1MiB/500.0MiB object store
+2026-10-04 22:44:13,630	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:13,630	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 5833810/11667620
+2026-10-04 22:44:13,630	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (0.0B); Resources: 1.0 CPU, 106.1MiB memory, 212.1MiB object store
+2026-10-04 22:44:13,630	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 5833810/1
+2026-10-04 22:44:13,631	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 0.0B object store
+2026-10-04 22:44:13,631	INFO logging_progress.py:231 --     - Shuffle: 5833810/10748872
+2026-10-04 22:44:13,631	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:44:13,632	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:13,633	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:13,633	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:23,676	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:23,677	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:23,677	INFO logging_progress.py:227 -- Active & requested resources: 2.24/4 CPU, 1.3GiB/2.0GiB memory, 398.2MiB/500.0MiB object store
+2026-10-04 22:44:23,677	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:23,677	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 8666677/11555569
+2026-10-04 22:44:23,677	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 105.0MiB memory, 288.1MiB object store
+2026-10-04 22:44:23,677	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 7594043/1
+2026-10-04 22:44:23,677	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.2GiB memory, 110.1MiB object store
+2026-10-04 22:44:23,677	INFO logging_progress.py:231 --     - Shuffle: 7594043/12150469
+2026-10-04 22:44:23,677	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:44:23,677	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:23,677	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:23,677	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:33,716	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:33,716	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:33,716	INFO logging_progress.py:227 -- Active & requested resources: 2.24/4 CPU, 1.3GiB/2.0GiB memory, 398.2MiB/500.0MiB object store
+2026-10-04 22:44:33,717	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:33,717	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 8666677/11555569
+2026-10-04 22:44:33,717	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 105.0MiB memory, 288.1MiB object store
+2026-10-04 22:44:33,717	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 7594043/1
+2026-10-04 22:44:33,717	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.2GiB memory, 110.1MiB object store
+2026-10-04 22:44:33,717	INFO logging_progress.py:231 --     - Shuffle: 7594043/12150469
+2026-10-04 22:44:33,717	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:44:33,717	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:33,717	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:33,717	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:43,720	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:44,005	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:44,005	INFO logging_progress.py:227 -- Active & requested resources: 2.24/4 CPU, 1.4GiB/2.0GiB memory, 468.6MiB/500.0MiB object store
+2026-10-04 22:44:44,005	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:44,006	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 10633238/11555569
+2026-10-04 22:44:44,006	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 105.0MiB memory, 363.9MiB object store
+2026-10-04 22:44:44,006	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 8666677/1
+2026-10-04 22:44:44,006	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.2 CPU, 1.3GiB memory, 104.7MiB object store
+2026-10-04 22:44:44,006	INFO logging_progress.py:231 --     - Shuffle: 8666677/11555569
+2026-10-04 22:44:44,006	INFO logging_progress.py:231 --     - Reduce: 0/1
+2026-10-04 22:44:44,006	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:44,006	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:44,006	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:44:53,789	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:44:53,789	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:44:53,789	INFO logging_progress.py:227 -- Active & requested resources: 0.24/4 CPU, 1.0GiB/2.0GiB memory, 0.0B/500.0MiB object store
+2026-10-04 22:44:53,789	INFO logging_progress.py:181 -- 
+2026-10-04 22:44:53,789	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:44:53,789	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:53,789	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:44:53,789	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 0.0B object store
+2026-10-04 22:44:53,789	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:44:53,789	INFO logging_progress.py:231 --     - Reduce: 0/?
+2026-10-04 22:44:53,789	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:44:53,789	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 9 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:44:53,789	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:03,861	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:03,861	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:03,862	INFO logging_progress.py:227 -- Active & requested resources: 1.24/4 CPU, 1.0GiB/2.0GiB memory, 106.0MiB/500.0MiB object store
+2026-10-04 22:45:03,862	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:03,862	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:03,862	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:03,863	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:03,863	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 106.0MiB object store
+2026-10-04 22:45:03,863	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:03,863	INFO logging_progress.py:231 --     - Reduce: 1462879/?
+2026-10-04 22:45:03,863	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:03,863	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 1 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:45:03,864	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:13,939	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:13,941	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:13,942	INFO logging_progress.py:227 -- Active & requested resources: 1.24/4 CPU, 1.0GiB/2.0GiB memory, 106.0MiB/500.0MiB object store
+2026-10-04 22:45:13,942	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:13,942	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:13,942	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:13,942	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:13,942	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 106.0MiB object store
+2026-10-04 22:45:13,943	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:13,943	INFO logging_progress.py:231 --     - Reduce: 1462879/?
+2026-10-04 22:45:13,943	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:13,943	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 31 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:45:13,943	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:23,993	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:23,995	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:23,995	INFO logging_progress.py:227 -- Active & requested resources: 1.24/4 CPU, 1.0GiB/2.0GiB memory, 106.0MiB/500.0MiB object store
+2026-10-04 22:45:23,995	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:23,995	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:23,995	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:23,995	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:23,995	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 106.0MiB object store
+2026-10-04 22:45:23,995	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:23,995	INFO logging_progress.py:231 --     - Reduce: 1462879/?
+2026-10-04 22:45:23,996	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:23,996	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 31 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:45:23,996	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:34,038	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:34,108	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:34,108	INFO logging_progress.py:227 -- Active & requested resources: 1.24/4 CPU, 1.0GiB/2.0GiB memory, 106.0MiB/500.0MiB object store
+2026-10-04 22:45:34,108	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:34,108	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:34,108	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:34,108	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:34,108	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 106.0MiB object store
+2026-10-04 22:45:34,108	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:34,108	INFO logging_progress.py:231 --     - Reduce: 1462879/?
+2026-10-04 22:45:34,108	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:34,108	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 31 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-04 22:45:34,109	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:44,198	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:44,201	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:44,202	INFO logging_progress.py:227 -- Active & requested resources: 4.24/4 CPU, 1.0GiB/2.0GiB memory, 424.1MiB/500.0MiB object store
+2026-10-04 22:45:44,203	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:44,203	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:44,203	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:44,203	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:44,203	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 424.1MiB object store
+2026-10-04 22:45:44,203	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:44,203	INFO logging_progress.py:231 --     - Reduce: 5851353/?
+2026-10-04 22:45:44,203	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:44,203	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 68 (0.0B); Resources: 4.0 CPU, 0.0B object store
+2026-10-04 22:45:44,203	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:45:54,292	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:45:54,539	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:45:54,579	INFO logging_progress.py:227 -- Active & requested resources: 4.24/4 CPU, 1.0GiB/2.0GiB memory, 424.1MiB/500.0MiB object store
+2026-10-04 22:45:54,579	INFO logging_progress.py:181 -- 
+2026-10-04 22:45:54,580	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:45:54,580	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:45:54,580	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:45:54,580	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 424.1MiB object store
+2026-10-04 22:45:54,580	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:45:54,580	INFO logging_progress.py:231 --     - Reduce: 5851353/?
+2026-10-04 22:45:54,580	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:45:54,580	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 111 (0.0B); Resources: 4.0 CPU, 0.0B object store
+2026-10-04 22:45:54,580	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:46:04,341	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:46:04,342	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:46:04,342	INFO logging_progress.py:227 -- Active & requested resources: 4.24/4 CPU, 1.0GiB/2.0GiB memory, 424.1MiB/500.0MiB object store
+2026-10-04 22:46:04,342	INFO logging_progress.py:181 -- 
+2026-10-04 22:46:04,342	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:46:04,342	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:46:04,342	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:46:04,342	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 424.1MiB object store
+2026-10-04 22:46:04,342	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:46:04,342	INFO logging_progress.py:231 --     - Reduce: 5851353/?
+2026-10-04 22:46:04,342	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:46:04,342	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 112 (0.0B); Resources: 4.0 CPU, 0.0B object store
+2026-10-04 22:46:04,342	INFO logging_progress.py:192 -- =================================================================
+2026-10-04 22:46:14,399	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:46:14,400	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-04 22:46:14,400	INFO logging_progress.py:227 -- Active & requested resources: 4.24/4 CPU, 1.0GiB/2.0GiB memory, 424.1MiB/500.0MiB object store
+2026-10-04 22:46:14,400	INFO logging_progress.py:181 -- 
+2026-10-04 22:46:14,401	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:46:14,401	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:46:14,401	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:46:14,401	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 424.1MiB object store
+2026-10-04 22:46:14,401	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:46:14,401	INFO logging_progress.py:231 --     - Reduce: 5851353/?
+2026-10-04 22:46:14,401	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 0/1
+2026-10-04 22:46:14,401	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 112 (0.0B); Resources: 4.0 CPU, 0.0B object store
+2026-10-04 22:46:14,401	INFO logging_progress.py:192 -- =================================================================
+[33m(raylet)[0m Task HashShuffleAggregator.finalize failed. There are infinite retries remaining, so the task will be retried. Error: The actor is temporarily unavailable: RpcError: RPC error: Socket closed rpc_code: 14
+[33m(raylet)[0m Task HashShuffleAggregator.finalize failed. There are infinite retries remaining, so the task will be retried. Error: The actor is temporarily unavailable: RpcError: RPC error: failed to connect to all addresses; last error: UNKNOWN: ipv4:10.24.20.157:20005: Failed to connect to remote host: Connection refused rpc_code: 14
+[33m(raylet)[0m Task _map_task failed. There are infinite retries remaining, so the task will be retried. Error: Task failed because the node it was running on is dead or unavailable. Node IP: 10.24.20.157, node ID: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b. This can happen if the node was preempted, had a hardware failure, or its raylet crashed unexpectedly. To see node death information, use `ray list nodes --filter node_id=14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b`, check the Ray dashboard cluster page, search the node ID in the GCS logs, or use `ray logs raylet.out -ip 10.24.20.157`.
+[33m(raylet)[0m Task HashShuffleAggregator.finalize failed. There are infinite retries remaining, so the task will be retried. Error: The actor is temporarily unavailable: RpcError: RPC error: Socket closed rpc_code: 14[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[33m(raylet)[0m Task HashShuffleAggregator.finalize failed. There are infinite retries remaining, so the task will be retried. Error: The actor is temporarily unavailable: RpcError: RPC error: failed to connect to all addresses; last error: UNKNOWN: ipv4:10.24.20.157:20005: Failed to connect to remote host: Connection refused rpc_code: 14[32m [repeated 16x across cluster][0m
+2026-10-04 22:46:24,464	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aBVvUVHvckD60f90gAu_0 =======
+2026-10-04 22:46:24,464	INFO logging_progress.py:225 -- Total Progress: 1461676/?
+2026-10-04 22:46:24,465	INFO logging_progress.py:227 -- Active & requested resources: 3.24/4 CPU, 1.0GiB/2.0GiB memory, 697.3MiB/500.0MiB object store
+2026-10-04 22:46:24,465	INFO logging_progress.py:181 -- 
+2026-10-04 22:46:24,465	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(_add_bucket): 11698059/11698059
+2026-10-04 22:46:24,465	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-04 22:46:24,465	INFO logging_progress.py:231 -- Shuffle(key_columns=('_bucket',), num_partitions=200): 11698059/?
+2026-10-04 22:46:24,465	INFO logging_progress.py:233 --   Tasks: 4; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.2 CPU, 1.0GiB memory, 318.2MiB object store
+2026-10-04 22:46:24,465	INFO logging_progress.py:231 --     - Shuffle: 11698059/12152272
+2026-10-04 22:46:24,465	INFO logging_progress.py:231 --     - Reduce: 5851353/?
+2026-10-04 22:46:24,465	INFO logging_progress.py:231 -- MapBatches(_dedup_group)->MapBatches(drop_columns): 1461676/?
+2026-10-04 22:46:24,465	INFO logging_progress.py:233 --   Tasks: 3; Actors: 0; Queued blocks: 112 (0.0B); Resources: 3.0 CPU, 379.2MiB object store
+2026-10-04 22:46:24,465	INFO logging_progress.py:192 -- =================================================================
+[33m(raylet)[0m Task HashShuffleAggregator.finalize failed. There are infinite retries remaining, so the task will be retried. Error: The actor is temporarily unavailable: RpcError: RPC error: failed to connect to all addresses; last error: UNKNOWN: ipv4:10.24.20.157:20007: Failed to connect to remote host: Connection refused rpc_code: 14[32m [repeated 7x across cluster][0m
+[33m(raylet)[0m The node with node id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b and address: 10.24.20.157 and node name: 10.24.20.157 has been marked dead because the detector has missed too many heartbeats from it. This can happen when a 	(1) raylet crashes unexpectedly (OOM, etc.) 
+	(2) raylet has lagging heartbeats due to slow network or busy workload.
+[2026-10-04 22:46:27,736 E 6992 7035] core_worker.cc:525: :info_message: Attempting to recover 5 lost objects by resubmitting their tasks or setting a new primary location from existing copies. To disable object reconstruction, set @ray.remote(max_retries=0).
+2026-10-04 22:46:28,635	ERROR hash_shuffle.py:1115 -- Aggregation of the 135 partition failed with: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 337, in on_data_ready
+    self._pending_meta_ref = self._streaming_gen._next_sync(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/object_ref_generator.py", line 300, in _next_sync
+    raise StopIteration from None
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 348, in on_data_ready
+    ray.get(self._pending_block_ref)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 1055, in get_objects
+    raise value
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+2026-10-04 22:46:28,655	ERROR hash_shuffle.py:1115 -- Aggregation of the 7 partition failed with: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 337, in on_data_ready
+    self._pending_meta_ref = self._streaming_gen._next_sync(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/object_ref_generator.py", line 300, in _next_sync
+    raise StopIteration from None
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 348, in on_data_ready
+    ray.get(self._pending_block_ref)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 1055, in get_objects
+    raise value
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+2026-10-04 22:46:28,656	ERROR hash_shuffle.py:1115 -- Aggregation of the 187 partition failed with: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 337, in on_data_ready
+    self._pending_meta_ref = self._streaming_gen._next_sync(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/object_ref_generator.py", line 300, in _next_sync
+    raise StopIteration from None
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 348, in on_data_ready
+    ray.get(self._pending_block_ref)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 1055, in get_objects
+    raise value
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+2026-10-04 22:46:28,657	ERROR streaming_executor_state.py:696 -- An exception was raised from a task of operator "Shuffle(key_columns=('_bucket',), num_partitions=200)". Dataset execution will now abort. To ignore this exception and continue, set DataContext.max_errored_blocks.
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 337, in on_data_ready
+    self._pending_meta_ref = self._streaming_gen._next_sync(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/object_ref_generator.py", line 300, in _next_sync
+    raise StopIteration from None
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 348, in on_data_ready
+    ray.get(self._pending_block_ref)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 1055, in get_objects
+    raise value
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+2026-10-04 22:46:28,777	INFO streaming_executor.py:365 -- ⚠️  Dataset dataset_034aBVvUVHvckD60f90gAu_0 execution failed
+2026-10-04 22:46:28,836	ERROR exceptions.py:88 -- Exception occurred in Ray Data or Ray Core internal code. If you continue to see this error, please open an issue on the Ray project GitHub page with the full stack trace below: https://github.com/ray-project/ray/issues/new/choose
+2026-10-04 22:46:28,838	ERROR exceptions.py:111 -- Full stack trace:
+Traceback (most recent call last):
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/exceptions.py", line 57, in handle_trace
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/dataset.py", line 8423, in _execute
+    bundle = RefBundle.merge_ref_bundles(list(bundles))
+                                         ^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/executor.py", line 37, in __next__
+    return self.get_next()
+           ^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor.py", line 782, in get_next
+    bundle = state.get_output_blocking(output_split_idx)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor_state.py", line 504, in get_output_blocking
+    raise self._exception
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor.py", line 437, in run
+    continue_sched = self._scheduling_loop_step(self._topology)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor.py", line 518, in _scheduling_loop_step
+    num_errored_blocks = process_completed_tasks(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor_state.py", line 769, in process_completed_tasks
+    _record_errored_block(fetch_exc, failed_op_name)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/streaming_executor_state.py", line 697, in _record_errored_block
+    raise e from None
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/_internal/execution/interfaces/physical_operator.py", line 348, in on_data_ready
+    ray.get(self._pending_block_ref)
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 134, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 3004, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/_private/worker.py", line 1055, in get_objects
+    raise value
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+ray.data.exceptions.SystemException
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pg/Assignment_3/ray_clean.py", line 164, in <module>
+    main()
+  File "/home/pg/Assignment_3/ray_clean.py", line 152, in main
+    ds = step("cleanse", lambda: cleanse(ds))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/Assignment_3/ray_clean.py", line 144, in step
+    ds, n = checkpoint(ds, args.instrument)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pg/Assignment_3/ray_clean.py", line 113, in checkpoint
+    ds = ds.materialize()
+         ^^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/dataset.py", line 7750, in materialize
+    bundle: RefBundle = copy._execute()
+                        ^^^^^^^^^^^^^^^
+  File "/home/pg/miniforge3/envs/a3/lib/python3.11/site-packages/ray/data/exceptions.py", line 115, in handle_trace
+    raise e.with_traceback(None) from SystemException()
+ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+	class_name: HashShuffleAggregator
+	actor_id: 01391504f0b27d7204f46cd201000000
+	pid: 8971
+	namespace: 08341ddd-4c60-41cf-9146-6427f52cd1d7
+	ip: 10.24.20.157
+The actor died because its node has died. Node Id: 14f2738ca956c0fa9195b2b090489d9a640ba6b866d79df8cdccae4b
+	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats

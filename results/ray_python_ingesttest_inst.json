@@ -1,0 +1,22 @@
+{
+  "framework": "ray",
+  "udf_mode": "python",
+  "run_id": "ingesttest_inst",
+  "total_seconds": 5.769,
+  "stages": [
+    {
+      "stage": "ingest",
+      "seconds": 5.757
+    }
+  ],
+  "row_counts": {
+    "after_ingest": 12672737
+  },
+  "config": {
+    "nodes": 2,
+    "cpus": 4.0,
+    "blocks": 8,
+    "ray_version": "2.59.0",
+    "instrument": true
+  }
+}

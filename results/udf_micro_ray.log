@@ -1,0 +1,152 @@
+nohup: ignoring input
+[03:26:15] starting Ray
+2026-10-05 03:26:31,850	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIU1bUsrnk3GoSCGaG5_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:31,850	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIU1bUsrnk3GoSCGaG5_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2]
+2026-10-05 03:26:31,856	INFO __init__.py:56 -- Progress will be logged because stdout is a non-interactive terminal.
+2026-10-05 03:26:32,004	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIU1bUsrnk3GoSCGaG5_0 =======
+2026-10-05 03:26:32,004	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:32,004	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:32,004	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:32,004	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 03:26:32,004	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:32,004	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 03:26:32,004	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 03:26:32,004	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:35,837	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIU1bUsrnk3GoSCGaG5_0 execution finished in 3.99 seconds
+ray rows: 11698059
+2026-10-05 03:26:35,898	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIU8BpTFzRcPKREASPT_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:35,898	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIU8BpTFzRcPKREASPT_0: InputDataBuffer[Input] -> LimitOperator[limit=200000] -> TaskPoolMapOperator[MapBatches(udf_python)->Project]
+2026-10-05 03:26:35,936	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIU8BpTFzRcPKREASPT_0 =======
+2026-10-05 03:26:35,936	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:35,936	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:35,936	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:35,936	INFO logging_progress.py:231 -- limit=200000: 0/1
+2026-10-05 03:26:35,936	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 7 (0.0B); Resources: 0.0 CPU, 4.6MiB object store
+2026-10-05 03:26:35,936	INFO logging_progress.py:231 -- MapBatches(udf_python)->Project: 0/1
+2026-10-05 03:26:35,936	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 03:26:35,936	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:36,132	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIU8BpTFzRcPKREASPT_0 execution finished in 0.23 seconds
+2026-10-05 03:26:36,151	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIU8aRYRLyg7XbxvzTt_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:36,151	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIU8aRYRLyg7XbxvzTt_0: InputDataBuffer[Input] -> LimitOperator[limit=200000] -> TaskPoolMapOperator[MapBatches(udf_pandas)->Project]
+2026-10-05 03:26:36,190	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIU8aRYRLyg7XbxvzTt_0 =======
+2026-10-05 03:26:36,190	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:36,190	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:36,190	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:36,190	INFO logging_progress.py:231 -- limit=200000: 0/1
+2026-10-05 03:26:36,190	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 7 (0.0B); Resources: 0.0 CPU, 4.6MiB object store
+2026-10-05 03:26:36,191	INFO logging_progress.py:231 -- MapBatches(udf_pandas)->Project: 0/1
+2026-10-05 03:26:36,191	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 03:26:36,191	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:36,313	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIU8aRYRLyg7XbxvzTt_0 execution finished in 0.16 seconds
+2026-10-05 03:26:36,333	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIU8sGvsKqZs1FLTFw5_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:36,333	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIU8sGvsKqZs1FLTFw5_0: InputDataBuffer[Input] -> LimitOperator[limit=200000] -> TaskPoolMapOperator[MapBatches(udf_native)->Project]
+2026-10-05 03:26:36,372	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIU8sGvsKqZs1FLTFw5_0 =======
+2026-10-05 03:26:36,372	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:36,372	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:36,372	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:36,372	INFO logging_progress.py:231 -- limit=200000: 0/1
+2026-10-05 03:26:36,372	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 7 (0.0B); Resources: 0.0 CPU, 4.6MiB object store
+2026-10-05 03:26:36,372	INFO logging_progress.py:231 -- MapBatches(udf_native)->Project: 0/1
+2026-10-05 03:26:36,372	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 03:26:36,372	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:36,443	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIU8sGvsKqZs1FLTFw5_0 execution finished in 0.11 seconds
+2026-10-05 03:26:36,460	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIU94aR7qVOU67DvwMA_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:36,460	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIU94aR7qVOU67DvwMA_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_python)->Project]
+2026-10-05 03:26:36,481	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIU94aR7qVOU67DvwMA_0 =======
+2026-10-05 03:26:36,481	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:36,481	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:36,481	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:36,481	INFO logging_progress.py:231 -- MapBatches(udf_python)->Project: 0/1
+2026-10-05 03:26:36,482	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:36,482	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:39,637	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIU94aR7qVOU67DvwMA_0 execution finished in 3.17 seconds
+ray python  rep 1    3.2s sum=13739637981
+2026-10-05 03:26:39,695	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUE9njrn1nBMWRsw9T_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:39,695	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUE9njrn1nBMWRsw9T_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_pandas)->Project]
+2026-10-05 03:26:39,761	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUE9njrn1nBMWRsw9T_0 =======
+2026-10-05 03:26:39,761	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:39,761	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:39,761	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:39,761	INFO logging_progress.py:231 -- MapBatches(udf_pandas)->Project: 0/1
+2026-10-05 03:26:39,761	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:39,761	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:41,912	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUE9njrn1nBMWRsw9T_0 execution finished in 2.22 seconds
+ray pandas  rep 1    2.2s sum=13739637981
+2026-10-05 03:26:41,934	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUHgDWVvcxWv4IKGsF_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:41,934	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUHgDWVvcxWv4IKGsF_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_native)->Project]
+2026-10-05 03:26:41,953	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUHgDWVvcxWv4IKGsF_0 =======
+2026-10-05 03:26:41,953	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:41,953	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:41,953	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:41,953	INFO logging_progress.py:231 -- MapBatches(udf_native)->Project: 0/1
+2026-10-05 03:26:41,953	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:41,953	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:43,161	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUHgDWVvcxWv4IKGsF_0 execution finished in 1.23 seconds
+ray native  rep 1    1.2s sum=13739637981
+2026-10-05 03:26:43,179	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUJddjj5c8PnmkMSku_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:43,179	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUJddjj5c8PnmkMSku_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_pandas)->Project]
+2026-10-05 03:26:43,201	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUJddjj5c8PnmkMSku_0 =======
+2026-10-05 03:26:43,201	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:43,201	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:43,201	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:43,201	INFO logging_progress.py:231 -- MapBatches(udf_pandas)->Project: 0/1
+2026-10-05 03:26:43,201	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:43,201	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:45,430	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUJddjj5c8PnmkMSku_0 execution finished in 2.25 seconds
+ray pandas  rep 2    2.3s sum=13739637981
+2026-10-05 03:26:45,449	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUND1bWQ3id75NYPGb_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:45,449	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUND1bWQ3id75NYPGb_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_native)->Project]
+2026-10-05 03:26:45,469	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUND1bWQ3id75NYPGb_0 =======
+2026-10-05 03:26:45,469	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:45,469	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:45,469	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:45,469	INFO logging_progress.py:231 -- MapBatches(udf_native)->Project: 0/1
+2026-10-05 03:26:45,469	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:45,469	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:46,699	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUND1bWQ3id75NYPGb_0 execution finished in 1.25 seconds
+ray native  rep 2    1.3s sum=13739637981
+2026-10-05 03:26:46,725	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUPDMj45iMM02hZgqz_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:46,725	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUPDMj45iMM02hZgqz_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_python)->Project]
+2026-10-05 03:26:46,751	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUPDMj45iMM02hZgqz_0 =======
+2026-10-05 03:26:46,751	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:46,751	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:46,751	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:46,751	INFO logging_progress.py:231 -- MapBatches(udf_python)->Project: 0/1
+2026-10-05 03:26:46,751	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:46,751	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:49,254	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUPDMj45iMM02hZgqz_0 execution finished in 2.53 seconds
+ray python  rep 2    2.6s sum=13739637981
+2026-10-05 03:26:49,277	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUTDx4CLcCr08JaJeh_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:49,277	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUTDx4CLcCr08JaJeh_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_native)->Project]
+2026-10-05 03:26:49,309	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUTDx4CLcCr08JaJeh_0 =======
+2026-10-05 03:26:49,310	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:49,310	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:49,310	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:49,310	INFO logging_progress.py:231 -- MapBatches(udf_native)->Project: 0/1
+2026-10-05 03:26:49,310	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:49,310	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:50,502	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUTDx4CLcCr08JaJeh_0 execution finished in 1.22 seconds
+ray native  rep 3    1.2s sum=13739637981
+2026-10-05 03:26:50,524	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUVBaZteXJy3ufnwIL_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:50,524	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUVBaZteXJy3ufnwIL_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_python)->Project]
+2026-10-05 03:26:50,560	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUVBaZteXJy3ufnwIL_0 =======
+2026-10-05 03:26:50,561	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:50,561	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:50,561	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:50,561	INFO logging_progress.py:231 -- MapBatches(udf_python)->Project: 0/1
+2026-10-05 03:26:50,567	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:50,568	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:52,917	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUVBaZteXJy3ufnwIL_0 execution finished in 2.39 seconds
+ray python  rep 3    2.4s sum=13739637981
+2026-10-05 03:26:52,944	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aIUYzUBzVLHlGpGe95W_0. Full logs are in /tmp/ray/session_2026-10-05_03-26-16_402082_291195/logs/ray-data
+2026-10-05 03:26:52,944	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aIUYzUBzVLHlGpGe95W_0: InputDataBuffer[Input] -> TaskPoolMapOperator[MapBatches(udf_pandas)->Project]
+2026-10-05 03:26:52,964	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aIUYzUBzVLHlGpGe95W_0 =======
+2026-10-05 03:26:52,964	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 03:26:52,965	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 03:26:52,965	INFO logging_progress.py:181 -- 
+2026-10-05 03:26:52,965	INFO logging_progress.py:231 -- MapBatches(udf_pandas)->Project: 0/1
+2026-10-05 03:26:52,965	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 7 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 03:26:52,965	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 03:26:55,099	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aIUYzUBzVLHlGpGe95W_0 execution finished in 2.15 seconds
+ray pandas  rep 3    2.2s sum=13739637981
+[03:26:57] UDF MICRO DONE

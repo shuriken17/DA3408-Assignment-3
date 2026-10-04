@@ -1,0 +1,40 @@
+{
+  "framework": "spark",
+  "udf_mode": "native",
+  "run_id": "bench1_e2e",
+  "total_seconds": 147.435,
+  "stages": [
+    {
+      "stage": "ingest",
+      "seconds": 9.71
+    },
+    {
+      "stage": "cleanse",
+      "seconds": 0.405
+    },
+    {
+      "stage": "join_zones",
+      "seconds": 8.951
+    },
+    {
+      "stage": "apply_udf",
+      "seconds": 0.464
+    },
+    {
+      "stage": "join_heavy",
+      "seconds": 0.564
+    },
+    {
+      "stage": "export",
+      "seconds": 125.065
+    }
+  ],
+  "row_counts": {},
+  "config": {
+    "master": "spark://127.0.0.1:7077",
+    "shuffle_partitions": 8,
+    "aqe": false,
+    "spark_version": "3.5.3",
+    "instrument": false
+  }
+}

@@ -1,0 +1,1205 @@
+ray: 2.59.0 | nodes: 2 | CPUs: 4.0 | udf: pandas | instrument: False | only-bucket: None
+2026-10-05 02:08:54,534	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGZuhDv4JqMUd22ebkl_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:08:54,534	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGZuhDv4JqMUd22ebkl_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:08:54,545	INFO __init__.py:56 -- Progress will be logged because stdout is a non-interactive terminal.
+2026-10-05 02:08:54,671	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:08:54,672	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:08:54,672	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:181 -- 
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:08:54,672	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:08:54,673	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:09:05,962	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:09:05,962	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:09:05,962	INFO logging_progress.py:227 -- Active & requested resources: 1/4 CPU, 1.1GiB/500.0MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:181 -- 
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- MapBatches(canon): 2306678/?
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (47.1MiB); Resources: 0.0 CPU, 124.6MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 156.7MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 183.0MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 178.7MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11014399/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,962	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:09:05,962	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 5 (464.2MiB); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:09:05,963	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:05,963	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:09:16,015	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:09:16,032	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:09:16,040	INFO logging_progress.py:227 -- Active & requested resources: 4/4 CPU, 153.2MiB/2.0GiB memory, 729.6MiB/500.0MiB object store
+2026-10-05 02:09:16,040	INFO logging_progress.py:181 -- 
+2026-10-05 02:09:16,041	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:16,041	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,041	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:09:16,041	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:09:16,041	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/?
+2026-10-05 02:09:16,041	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 124.6MiB memory, 123.9MiB object store
+2026-10-05 02:09:16,041	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:16,041	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,041	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:09:16,041	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 54.5MiB object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:09:16,042	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 178.7MiB object store
+2026-10-05 02:09:16,042	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/1
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 225.1MiB object store
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/1
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1173453/?
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (48.3MiB); Resources: 2.0 CPU, 28.6MiB memory, 100.3MiB object store
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 -- Repartition: 0/?
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 5 (71.6MiB); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:09:16,043	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:16,043	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:16,044	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:09:16,044	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,044	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:09:16,044	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:09:16,044	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:09:16,044	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:09:16,044	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:16,044	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:09:31,209	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:09:31,210	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:09:31,210	INFO logging_progress.py:227 -- Active & requested resources: 0/4 CPU, 203.7MiB/500.0MiB object store
+2026-10-05 02:09:31,210	INFO logging_progress.py:181 -- 
+2026-10-05 02:09:31,210	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:31,210	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,210	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:31,211	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,211	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:09:31,212	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,215	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:09:31,217	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,217	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:31,217	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/3288250
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6355016
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1454827/727414
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1454827/1454827
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 1454827/1454827
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 203.7MiB object store
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- Repartition: 0/1454827
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:31,223	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:09:31,223	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:31,224	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:09:41,226	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:09:41,239	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:09:41,243	INFO logging_progress.py:227 -- Active & requested resources: 1/4 CPU, 203.7MiB/500.0MiB object store
+2026-10-05 02:09:41,243	INFO logging_progress.py:181 -- 
+2026-10-05 02:09:41,243	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:41,243	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,243	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:09:41,243	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,243	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:09:41,243	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:41,244	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:09:41,244	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:09:41,244	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:41,244	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:09:41,244	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,244	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:09:41,246	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,246	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:41,246	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,246	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:09:41,248	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,248	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/3288250
+2026-10-05 02:09:41,251	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,251	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6355016
+2026-10-05 02:09:41,251	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,251	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1454827/727414
+2026-10-05 02:09:41,251	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1454827/1454827
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 1454827/1454827
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 203.7MiB object store; 1454827 rows output
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:41,252	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:09:41,252	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:09:41,252	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:09:51,255	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:09:51,260	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:09:51,260	INFO logging_progress.py:227 -- Active & requested resources: 1/4 CPU, 203.7MiB/500.0MiB object store
+2026-10-05 02:09:51,260	INFO logging_progress.py:181 -- 
+2026-10-05 02:09:51,260	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:51,260	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,260	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:09:51,260	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,263	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:09:51,263	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,263	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:51,263	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,263	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:09:51,263	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,263	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:09:51,263	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,263	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:51,263	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/3288250
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6355016
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1454827/727414
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:51,264	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1454827/1454827
+2026-10-05 02:09:51,264	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:51,265	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 1454827/1454827
+2026-10-05 02:09:51,265	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:09:51,265	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 203.7MiB object store; 1454827 rows output
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:09:51,265	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:09:51,265	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:09:51,265	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:01,286	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGZuhDv4JqMUd22ebkl_0 =======
+2026-10-05 02:10:01,287	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:01,287	INFO logging_progress.py:227 -- Active & requested resources: 1/4 CPU, 203.7MiB/500.0MiB object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/3288250
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6355016
+2026-10-05 02:10:01,288	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,288	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1454827/727414
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1454827/1454827
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1454827 rows output
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 1454827/1454827
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- Repartition: 1454827/1454827
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 203.7MiB object store; 1454827 rows output
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 --     - Split Repartition: 1454827/1
+2026-10-05 02:10:01,289	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:01,289	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:01,289	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:02,385	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGZuhDv4JqMUd22ebkl_0 execution finished in 67.84 seconds
+2026-10-05 02:10:03,629	INFO dataset.py:6680 -- Data sink Parquet finished. 1454827 rows and 248.1MiB data written.
+bucket 0 done in 70.7s | avail 1.3 GiB
+2026-10-05 02:10:04,441	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGbgu5KFM8uRoNjalAR_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:10:04,442	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGbgu5KFM8uRoNjalAR_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:10:04,574	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGbgu5KFM8uRoNjalAR_0 =======
+2026-10-05 02:10:04,575	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:04,575	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:10:04,575	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:04,576	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:04,576	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:04,576	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:04,576	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,576	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:04,576	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,576	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:04,577	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,580	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:04,580	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:10:04,581	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,581	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:04,582	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,582	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:04,582	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:04,582	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:04,582	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:14,774	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGbgu5KFM8uRoNjalAR_0 =======
+2026-10-05 02:10:14,775	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:14,776	INFO logging_progress.py:227 -- Active & requested resources: 3/4 CPU, 1.1GiB/500.0MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- MapBatches(canon): 2306678/?
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (47.1MiB); Resources: 0.0 CPU, 124.6MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 156.7MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 183.0MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 178.7MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11014399/1
+2026-10-05 02:10:14,776	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,776	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 2 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 4 (436.1MiB); Resources: 2.0 CPU, 0.0B object store
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:14,777	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:14,777	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:26,857	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGbgu5KFM8uRoNjalAR_0 =======
+2026-10-05 02:10:26,857	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:26,857	INFO logging_progress.py:227 -- Active & requested resources: 0/4 CPU, 181.4MiB/500.0MiB object store
+2026-10-05 02:10:26,858	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:26,858	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:26,858	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,858	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:10:26,858	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,858	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:10:26,858	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,859	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:26,859	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,859	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:10:26,859	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,859	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:10:26,859	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,859	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:26,859	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/3288250
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6355016
+2026-10-05 02:10:26,860	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,860	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1457942/728971
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- Repartition: 1457942/1457942
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1457942 rows output
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 --     - Split Repartition: 1457942/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1457942/1457942
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 181.4MiB object store
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- Repartition: 0/1457942
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1457942 rows output
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 --     - Split Repartition: 1457942/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:26,861	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:26,862	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:28,817	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGbgu5KFM8uRoNjalAR_0 execution finished in 24.37 seconds
+2026-10-05 02:10:28,888	INFO dataset.py:6680 -- Data sink Parquet finished. 1457942 rows and 248.5MiB data written.
+bucket 1 done in 25.3s | avail 1.2 GiB
+2026-10-05 02:10:28,939	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGcJicmCGa9M4epZjaK_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:10:28,939	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGcJicmCGa9M4epZjaK_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:10:28,968	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGcJicmCGa9M4epZjaK_0 =======
+2026-10-05 02:10:28,968	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:28,968	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:10:28,968	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:28,968	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:28,968	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:28,968	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:28,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,968	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:28,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,968	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:28,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,969	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:10:28,969	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:28,970	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:28,970	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:39,004	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGcJicmCGa9M4epZjaK_0 =======
+2026-10-05 02:10:39,004	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:39,004	INFO logging_progress.py:227 -- Active & requested resources: 3/4 CPU, 1.4GiB/500.0MiB object store
+2026-10-05 02:10:39,004	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:39,935	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:39,936	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,936	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:10:39,936	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:10:39,936	INFO logging_progress.py:231 -- MapBatches(canon): 2306678/4613356
+2026-10-05 02:10:39,936	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (47.1MiB); Resources: 0.0 CPU, 124.6MiB object store
+2026-10-05 02:10:39,937	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:39,938	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,938	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:10:39,938	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 156.7MiB object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 183.0MiB object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 536.2MiB object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11014399/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 5 (468.2MiB); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:39,939	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,939	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:39,940	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:39,940	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:39,940	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:39,940	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:39,940	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:49,029	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGcJicmCGa9M4epZjaK_0 =======
+2026-10-05 02:10:49,030	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:49,030	INFO logging_progress.py:227 -- Active & requested resources: 1/4 CPU, 204.3MiB/500.0MiB object store
+2026-10-05 02:10:49,030	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:49,030	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:49,030	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,030	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:10:49,030	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,030	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:10:49,030	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,030	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:49,030	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,030	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:10:49,031	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,031	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:10:49,031	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,031	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:49,031	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,031	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:10:49,031	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,031	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/?
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6470532
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1460092/?
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- Repartition: 1460092/1460092
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1460092 rows output
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 --     - Split Repartition: 1460092/1
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1460092/1460092
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- Repartition: 1460092/1460092
+2026-10-05 02:10:49,032	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1460092 rows output
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 --     - Split Repartition: 1460092/1
+2026-10-05 02:10:49,032	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 1460092/1460092
+2026-10-05 02:10:49,033	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,033	INFO logging_progress.py:231 -- Repartition: 1460092/1460092
+2026-10-05 02:10:49,033	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 204.3MiB object store; 1460092 rows output
+2026-10-05 02:10:49,033	INFO logging_progress.py:231 --     - Split Repartition: 1460092/1
+2026-10-05 02:10:49,033	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:49,033	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:49,033	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:10:49,743	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGcJicmCGa9M4epZjaK_0 execution finished in 20.80 seconds
+2026-10-05 02:10:49,833	INFO dataset.py:6680 -- Data sink Parquet finished. 1460092 rows and 248.8MiB data written.
+bucket 2 done in 20.9s | avail 0.8 GiB
+2026-10-05 02:10:49,919	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGcqgv6H0IPVu0JeU8R_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:10:49,919	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGcqgv6H0IPVu0JeU8R_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:10:49,956	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGcqgv6H0IPVu0JeU8R_0 =======
+2026-10-05 02:10:49,957	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:10:49,957	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:181 -- 
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,957	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:49,957	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,958	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:49,958	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,958	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:49,958	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,958	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:49,958	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,958	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:10:49,958	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,958	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:49,959	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:10:49,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,960	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:10:49,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:10:49,960	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:10:49,960	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:10:49,960	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:10:49,960	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:00,211	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGcqgv6H0IPVu0JeU8R_0 =======
+2026-10-05 02:11:00,213	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:00,213	INFO logging_progress.py:227 -- Active & requested resources: 0/4 CPU, 271.3MiB/500.0MiB object store
+2026-10-05 02:11:00,213	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:00,213	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:00,213	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,213	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:11:00,213	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,213	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:11:00,213	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,213	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:00,213	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,213	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:11:00,213	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/?
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6470532
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1463056/?
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- Repartition: 1463056/1463056
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 89.3MiB object store; 1463056 rows output
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 --     - Split Repartition: 1463056/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 1463056/1463056
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 182.0MiB object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- Repartition: 0/1463056
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 1463056 rows output
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 --     - Split Repartition: 1463056/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:00,214	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:00,214	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:02,255	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGcqgv6H0IPVu0JeU8R_0 execution finished in 12.33 seconds
+2026-10-05 02:11:02,346	INFO dataset.py:6680 -- Data sink Parquet finished. 1463056 rows and 249.3MiB data written.
+bucket 3 done in 12.5s | avail 0.7 GiB
+2026-10-05 02:11:02,408	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGdAKis06nCD6XisPpI_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:11:02,408	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGdAKis06nCD6XisPpI_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:11:02,443	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGdAKis06nCD6XisPpI_0 =======
+2026-10-05 02:11:02,443	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:02,443	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:11:02,443	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:02,443	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:02,443	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:11:02,443	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:02,443	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,443	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:02,443	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,443	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:02,444	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,444	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:02,445	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,445	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:02,445	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:02,445	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:02,445	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:12,445	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGdAKis06nCD6XisPpI_0 =======
+2026-10-05 02:11:12,446	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:12,446	INFO logging_progress.py:227 -- Active & requested resources: 4/4 CPU, 136.9MiB/2.0GiB memory, 1.2GiB/500.0MiB object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/4613356
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 124.6MiB memory, 123.9MiB object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:11:12,446	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,446	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 536.2MiB object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11774487/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1295842/?
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 1 (41.0MiB); Resources: 1.0 CPU, 12.3MiB memory, 92.3MiB object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- Repartition: 0/?
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 6 (79.1MiB); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:12,447	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:12,447	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:19,293	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGdAKis06nCD6XisPpI_0 execution finished in 16.88 seconds
+2026-10-05 02:11:19,563	INFO dataset.py:6680 -- Data sink Parquet finished. 1470843 rows and 250.4MiB data written.
+bucket 4 done in 17.2s | avail 0.8 GiB
+2026-10-05 02:11:19,611	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGdbORnTAxZAktC9q8F_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:11:19,612	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGdbORnTAxZAktC9q8F_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:11:19,649	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGdbORnTAxZAktC9q8F_0 =======
+2026-10-05 02:11:19,649	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:19,649	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,650	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:19,650	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:19,651	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:19,651	INFO logging_progress.py:192 -- =================================================================
+[36m(raylet)[0m Spilled 4138 MiB, 486 objects, write throughput 116 MiB/s.
+2026-10-05 02:11:29,867	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGdbORnTAxZAktC9q8F_0 =======
+2026-10-05 02:11:29,867	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:29,867	INFO logging_progress.py:227 -- Active & requested resources: 3/4 CPU, 141.5MiB/2.0GiB memory, 545.2MiB/500.0MiB object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- MapBatches(canon): 2306678/4613356
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 124.6MiB memory, 124.6MiB object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 156.7MiB object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,876	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:11:29,876	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 183.0MiB object store
+2026-10-05 02:11:29,879	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:29,879	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-05 02:11:29,879	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:29,880	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:11:29,880	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:29,880	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,880	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 8624399/1
+2026-10-05 02:11:29,881	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,888	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 277753/?
+2026-10-05 02:11:29,888	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 3 (211.2MiB); Resources: 1.0 CPU, 17.0MiB memory, 33.9MiB object store
+2026-10-05 02:11:29,888	INFO logging_progress.py:231 -- Repartition: 0/?
+2026-10-05 02:11:29,888	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (17.0MiB); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:29,890	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:29,890	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:29,890	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:29,891	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:29,891	INFO logging_progress.py:192 -- =================================================================
+[33m(raylet)[0m [2026-10-05 02:11:38,327 E 153611 153611] (raylet) node_manager.cc:3544: 1 Workers (tasks / actors) killed due to memory pressure (OOM), 0 Workers crashed due to other reasons at node (ID: 357016f15398a68ae3e53e69765313764c26c7bd1856c8f0bd47c9da, IP: 10.24.20.157) over the last time period. To see more information about the Workers killed on this node, use `ray logs raylet.out -ip 10.24.20.157`
+[33m(raylet)[0m 
+[33m(raylet)[0m Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-observability/user-guides/debug-apps/debug-memory.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero. Since 2.56, Ray updated the oom killing policy to enabling killing multiple workers and selecting workers based on the time since the task start executing. To revert to the legacy policy of determining worker to oom kill based on owner group size or only selecting a single worker to kill at a time, set the environment variable `RAY_worker_killing_policy_by_group` to true before starting Ray. If the idle workers have a non-trivial memory footprint at the time of OOM (check OOM log for non-selected idle workers), consider setting the environment variable `RAY_idle_worker_killing_memory_threshold_bytes` to a lower value to consider idle workers with lower memory footprint for killing.
+[36m(raylet)[0m Spilled 4138 MiB, 486 objects, write throughput 116 MiB/s.
+[33m(raylet)[0m 
+2026-10-05 02:11:40,076	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGdbORnTAxZAktC9q8F_0 =======
+2026-10-05 02:11:40,076	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:40,076	INFO logging_progress.py:227 -- Active & requested resources: 0/4 CPU, 139.1MiB/500.0MiB object store
+2026-10-05 02:11:40,076	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:40,076	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/3066766
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- MapBatches(canon): 3288250/?
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.3MiB object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 12672737/6470532
+2026-10-05 02:11:40,077	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,077	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1487341/743670
+2026-10-05 02:11:40,078	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 90.8MiB object store
+2026-10-05 02:11:40,078	INFO logging_progress.py:231 -- Repartition: 0/743670
+2026-10-05 02:11:40,079	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 743670 rows output
+2026-10-05 02:11:40,079	INFO logging_progress.py:231 --     - Split Repartition: 1487341/1
+2026-10-05 02:11:40,079	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:40,079	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,079	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:40,080	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,080	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:40,080	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:40,080	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:40,080	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:45,812	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGdbORnTAxZAktC9q8F_0 execution finished in 26.20 seconds
+2026-10-05 02:11:45,922	INFO dataset.py:6680 -- Data sink Parquet finished. 1487341 rows and 253.4MiB data written.
+bucket 5 done in 26.4s | avail 0.9 GiB
+2026-10-05 02:11:46,059	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGeGvkOdoJkkzTQcrvf_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:11:46,059	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGeGvkOdoJkkzTQcrvf_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:11:46,111	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGeGvkOdoJkkzTQcrvf_0 =======
+2026-10-05 02:11:46,111	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:46,111	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:11:46,111	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:46,111	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:46,111	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:11:46,111	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:46,111	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,111	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:46,111	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,111	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:46,111	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,111	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:46,111	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:46,112	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:46,112	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:46,113	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:46,113	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:11:56,163	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGeGvkOdoJkkzTQcrvf_0 =======
+2026-10-05 02:11:56,166	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:11:56,166	INFO logging_progress.py:227 -- Active & requested resources: 4/4 CPU, 136.9MiB/2.0GiB memory, 1.3GiB/500.0MiB object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:181 -- 
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/4613356
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 124.6MiB memory, 123.9MiB object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,166	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/3403766
+2026-10-05 02:11:56,166	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 183.0MiB object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 48.0B object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 536.2MiB object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11774487/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 606923/?
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 3 (224.0MiB); Resources: 1.0 CPU, 12.3MiB memory, 49.4MiB object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- Repartition: 0/?
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 3 (37.0MiB); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:11:56,167	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:11:56,167	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:12:02,690	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGeGvkOdoJkkzTQcrvf_0 execution finished in 16.63 seconds
+2026-10-05 02:12:02,823	INFO dataset.py:6680 -- Data sink Parquet finished. 1470223 rows and 250.6MiB data written.
+bucket 6 done in 16.9s | avail 0.5 GiB
+2026-10-05 02:12:02,905	INFO streaming_executor.py:214 -- Starting execution of Dataset dataset_034aGehRhQUhrdppHG1m4b_0. Full logs are in /tmp/ray/session_2026-10-05_02-02-32_987109_153132/logs/ray-data
+2026-10-05 02:12:02,905	INFO streaming_executor.py:215 -- Execution plan of Dataset dataset_034aGehRhQUhrdppHG1m4b_0: InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)], InputDataBuffer[Input] -> TaskPoolMapOperator[ListFiles] -> TaskPoolMapOperator[ReadFilesParquetV2] -> TaskPoolMapOperator[MapBatches(canon)] -> UnionOperator[UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon))] -> TaskPoolMapOperator[MapBatches(cleanse_batch)->MapBatches(keep_bucket)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(dedup_block)->MapBatches(add_zones)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(udf_pandas)] -> AllToAllOperator[Repartition] -> TaskPoolMapOperator[MapBatches(join_heavy_block)->Write]
+2026-10-05 02:12:02,967	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGehRhQUhrdppHG1m4b_0 =======
+2026-10-05 02:12:02,967	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:12:02,967	INFO logging_progress.py:227 -- Active & requested resources: 0/0 CPU, 0.0B/0.0B object store
+2026-10-05 02:12:02,967	INFO logging_progress.py:181 -- 
+2026-10-05 02:12:02,967	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:12:02,967	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 0.0B object store
+2026-10-05 02:12:02,967	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:12:02,967	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,967	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ListFiles: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 1 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- ReadFilesParquetV2: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- MapBatches(canon): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0 [backpressured:tasks(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:12:02,968	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:02,968	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:02,969	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:12:02,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,969	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:12:02,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:02,969	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:02,969	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:12:02,969	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,969	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:12:02,973	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:02,973	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:02,973	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:12:02,973	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:02,973	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:12:12,972	INFO logging_progress.py:174 -- ======= Running Dataset: dataset_034aGehRhQUhrdppHG1m4b_0 =======
+2026-10-05 02:12:12,973	INFO logging_progress.py:225 -- Total Progress: 0/?
+2026-10-05 02:12:12,973	INFO logging_progress.py:227 -- Active & requested resources: 3/4 CPU, 136.5MiB/2.0GiB memory, 825.2MiB/500.0MiB object store
+2026-10-05 02:12:12,973	INFO logging_progress.py:181 -- 
+2026-10-05 02:12:12,973	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:12:12,973	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,973	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3066766/3066766
+2026-10-05 02:12:12,973	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 47.1MiB object store
+2026-10-05 02:12:12,973	INFO logging_progress.py:231 -- MapBatches(canon): 3066766/?
+2026-10-05 02:12:12,973	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 124.6MiB memory, 123.9MiB object store
+2026-10-05 02:12:12,973	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:12:12,973	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,973	INFO logging_progress.py:231 -- ReadFilesParquetV2: 2913955/2913955
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- MapBatches(canon): 2913955/?
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3403766/3403766
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- MapBatches(canon): 3403766/?
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- ListFiles: 1/1
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- ReadFilesParquetV2: 3288250/3288250
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 178.7MiB object store
+2026-10-05 02:12:12,974	INFO logging_progress.py:231 -- MapBatches(canon): 2390000/1
+2026-10-05 02:12:12,974	INFO logging_progress.py:233 --   Tasks: 1 [backpressured:tasks(ResourceBudget),outputs(ResourceBudget)]; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 385.5MiB object store
+2026-10-05 02:12:12,975	INFO logging_progress.py:231 -- UnionOperator(MapBatches(canon), MapBatches(canon), MapBatches(canon), MapBatches(canon)): 11774487/1
+2026-10-05 02:12:12,976	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,977	INFO logging_progress.py:231 -- MapBatches(cleanse_batch)->MapBatches(keep_bucket): 1264012/?
+2026-10-05 02:12:12,977	INFO logging_progress.py:233 --   Tasks: 1; Actors: 0; Queued blocks: 0 (0.0B); Resources: 1.0 CPU, 11.9MiB memory, 90.0MiB object store
+2026-10-05 02:12:12,978	INFO logging_progress.py:231 -- Repartition: 0/?
+2026-10-05 02:12:12,978	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 6 (77.1MiB); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 -- MapBatches(dedup_block)->MapBatches(add_zones): 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 -- MapBatches(udf_pandas): 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 -- Repartition: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store; 0 rows output
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 --     - Split Repartition: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:231 -- MapBatches(join_heavy_block)->Write: 0/1
+2026-10-05 02:12:12,979	INFO logging_progress.py:233 --   Tasks: 0; Actors: 0; Queued blocks: 0 (0.0B); Resources: 0.0 CPU, 0.0B object store
+2026-10-05 02:12:12,979	INFO logging_progress.py:192 -- =================================================================
+2026-10-05 02:12:18,426	INFO streaming_executor.py:365 -- ✔️  Dataset dataset_034aGehRhQUhrdppHG1m4b_0 execution finished in 15.52 seconds
+2026-10-05 02:12:18,489	INFO dataset.py:6680 -- Data sink Parquet finished. 1433735 rows and 244.2MiB data written.
+bucket 7 done in 15.7s | avail 1.2 GiB
+saved results/ray_pandas_bench1_e2e.json | total 205.85s
+stage totals: {'ingest_cleanse': 2.1, 'dedup': 0.0, 'join_zones': 0.0, 'apply_udf': 0.0, 'join_heavy': 0.0, 'export': 203.5}
+row totals: {}
+[33m(raylet)[0m [2026-10-05 02:11:38,327 E 153611 153611] (raylet) node_manager.cc:3544: 1 Workers (tasks / actors) killed due to memory pressure (OOM), 0 Workers crashed due to other reasons at node (ID: 357016f15398a68ae3e53e69765313764c26c7bd1856c8f0bd47c9da, IP: 10.24.20.157) over the last time period. To see more information about the Workers killed on this node, use `ray logs raylet.out -ip 10.24.20.157`
+[33m(raylet)[0m Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-observability/user-guides/debug-apps/debug-memory.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero. Since 2.56, Ray updated the oom killing policy to enabling killing multiple workers and selecting workers based on the time since the task start executing. To revert to the legacy policy of determining worker to oom kill based on owner group size or only selecting a single worker to kill at a time, set the environment variable `RAY_worker_killing_policy_by_group` to true before starting Ray. If the idle workers have a non-trivial memory footprint at the time of OOM (check OOM log for non-selected idle workers), consider setting the environment variable `RAY_idle_worker_killing_memory_threshold_bytes` to a lower value to consider idle workers with lower memory footprint for killing.

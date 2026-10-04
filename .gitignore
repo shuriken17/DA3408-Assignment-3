@@ -1,0 +1,9 @@
+data/
+out/
+spark/
+.venv/
+__pycache__/
+*.pyc
+requirements-full.txt
+results/monitor/*.top
+results/dev_tests/

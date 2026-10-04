@@ -1,0 +1,42 @@
+{
+  "framework": "spark",
+  "udf_mode": "python",
+  "run_id": "udftest_inst",
+  "total_seconds": 220.216,
+  "stages": [
+    {
+      "stage": "ingest",
+      "seconds": 18.126
+    },
+    {
+      "stage": "cleanse",
+      "seconds": 39.558
+    },
+    {
+      "stage": "join_zones",
+      "seconds": 14.539
+    },
+    {
+      "stage": "apply_udf",
+      "seconds": 41.114
+    },
+    {
+      "stage": "join_heavy",
+      "seconds": 106.123
+    }
+  ],
+  "row_counts": {
+    "after_ingest": 12672737,
+    "after_cleanse": 11698059,
+    "after_join_zones": 11698059,
+    "after_apply_udf": 11698059,
+    "after_join_heavy": 11698059
+  },
+  "config": {
+    "master": "spark://127.0.0.1:7077",
+    "shuffle_partitions": 8,
+    "aqe": false,
+    "spark_version": "3.5.3",
+    "instrument": true
+  }
+}

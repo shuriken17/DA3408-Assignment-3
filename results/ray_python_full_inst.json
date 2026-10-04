@@ -1,0 +1,48 @@
+{
+  "framework": "ray",
+  "udf_mode": "python",
+  "run_id": "full_inst",
+  "total_seconds": 642.45,
+  "stages": [
+    {
+      "stage": "ingest_cleanse",
+      "seconds": 487.975
+    },
+    {
+      "stage": "dedup",
+      "seconds": 30.847
+    },
+    {
+      "stage": "join_zones",
+      "seconds": 10.421
+    },
+    {
+      "stage": "apply_udf",
+      "seconds": 36.522
+    },
+    {
+      "stage": "join_heavy",
+      "seconds": 55.383
+    },
+    {
+      "stage": "export",
+      "seconds": 21.172
+    }
+  ],
+  "row_counts": {
+    "after_ingest_cleanse": 11698059,
+    "after_dedup": 11698059,
+    "after_join_zones": 11698059,
+    "after_apply_udf": 11698059,
+    "after_join_heavy": 11698059
+  },
+  "config": {
+    "nodes": 2,
+    "cpus": 4.0,
+    "buckets": 8,
+    "batch": 10000,
+    "only_bucket": null,
+    "ray_version": "2.59.0",
+    "instrument": true
+  }
+}

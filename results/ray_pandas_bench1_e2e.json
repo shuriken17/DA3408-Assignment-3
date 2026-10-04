@@ -1,0 +1,43 @@
+{
+  "framework": "ray",
+  "udf_mode": "pandas",
+  "run_id": "bench1_e2e",
+  "total_seconds": 205.849,
+  "stages": [
+    {
+      "stage": "ingest_cleanse",
+      "seconds": 2.142
+    },
+    {
+      "stage": "dedup",
+      "seconds": 0.001
+    },
+    {
+      "stage": "join_zones",
+      "seconds": 0.001
+    },
+    {
+      "stage": "apply_udf",
+      "seconds": 0.0
+    },
+    {
+      "stage": "join_heavy",
+      "seconds": 0.0
+    },
+    {
+      "stage": "export",
+      "seconds": 203.459
+    }
+  ],
+  "row_counts": {},
+  "config": {
+    "nodes": 2,
+    "cpus": 4.0,
+    "buckets": 8,
+    "batch": 10000,
+    "only_bucket": null,
+    "udf_blocks": 2,
+    "ray_version": "2.59.0",
+    "instrument": false
+  }
+}

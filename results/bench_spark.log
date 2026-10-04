@@ -1,0 +1,11 @@
+nohup: ignoring input
+spark_python_bench1 rc=0 wall=137s result=ok | monitor: 126 samples | CPU peak 99% mean 65% | system memory peak 5128 MB | Spark/Ray RSS peak 4263 MB
+spark_pandas_bench1 rc=-9 wall=2400s result=ok | monitor: 179 samples | CPU peak 93% mean 56% | system memory peak 5340 MB | Spark/Ray RSS peak 4178 MB
+skip (already done): spark_native_bench1
+skip (already done): spark_pandas_bench2
+skip (already done): spark_native_bench2
+skip (already done): spark_python_bench2
+skip (already done): spark_native_bench3
+skip (already done): spark_python_bench3
+skip (already done): spark_pandas_bench3
+ALL DONE

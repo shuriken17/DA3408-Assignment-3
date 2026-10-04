@@ -1,0 +1,6 @@
+spark python  n=3 runs=[127, 111, 128] median=126.5s | CPU peak 99% | sys mem peak 5128 MB | cluster RSS peak 4326 MB
+spark pandas  n=3 runs=[214, 109, 99] median=108.8s | CPU peak 96% | sys mem peak 5340 MB | cluster RSS peak 4762 MB
+spark native  n=3 runs=[147, 99, 94] median=98.6s | CPU peak 100% | sys mem peak 4938 MB | cluster RSS peak 3904 MB
+ray   python  n=3 runs=[342, 382, 396] median=381.5s | CPU peak 99% | sys mem peak 5664 MB | cluster RSS peak 11683 MB
+ray   pandas  n=3 runs=[206, 247, 965] median=246.9s | CPU peak 100% | sys mem peak 5705 MB | cluster RSS peak 11845 MB
+ray   native  n=3 runs=[152, 381, 390] median=381.3s | CPU peak 97% | sys mem peak 5660 MB | cluster RSS peak 11564 MB

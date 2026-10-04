@@ -1,0 +1,21 @@
+{
+  "framework": "spark",
+  "udf_mode": "python",
+  "run_id": "ingesttest",
+  "total_seconds": 9.608,
+  "stages": [
+    {
+      "stage": "ingest",
+      "seconds": 9.605
+    }
+  ],
+  "row_counts": {
+    "after_ingest": 12672737
+  },
+  "config": {
+    "master": "spark://127.0.0.1:7077",
+    "shuffle_partitions": 8,
+    "aqe": false,
+    "spark_version": "3.5.3"
+  }
+}

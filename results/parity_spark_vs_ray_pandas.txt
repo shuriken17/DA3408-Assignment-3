@@ -1,0 +1,7 @@
+==== parity: out/spark vs out/ray_pandas
+raw schema differences (name, type) first vs second: [(('tpep_pickup_datetime', 'timestamp[ns]'), ('tpep_pickup_datetime', 'timestamp[us]')), (('tpep_dropoff_datetime', 'timestamp[ns]'), ('tpep_dropoff_datetime', 'timestamp[us]'))]
+schema equal after timestamp normalisation: True
+rows: 11698059 11698059 | equal: True
+columns with different checksum: none
+row-set checksum equal: True
+PARITY PASS

@@ -1,0 +1,26 @@
+nohup: ignoring input
+[01:41:58] starting Spark
+[01:42:19] spark workers alive: 2
+skip (already done): spark_python_bench1
+spark_pandas_bench1 rc=0 wall=227s result=ok | monitor: 179 samples | CPU peak 93% mean 56% | system memory peak 5340 MB | Spark/Ray RSS peak 4178 MB
+spark_native_bench1 rc=0 wall=155s result=ok | monitor: 139 samples | CPU peak 100% mean 67% | system memory peak 4938 MB | Spark/Ray RSS peak 3763 MB
+spark_pandas_bench2 rc=0 wall=120s result=ok | monitor: 106 samples | CPU peak 95% mean 52% | system memory peak 4982 MB | Spark/Ray RSS peak 4484 MB
+spark_native_bench2 rc=0 wall=104s result=ok | monitor: 96 samples | CPU peak 97% mean 50% | system memory peak 4668 MB | Spark/Ray RSS peak 3904 MB
+spark_python_bench2 rc=0 wall=117s result=ok | monitor: 108 samples | CPU peak 97% mean 51% | system memory peak 4820 MB | Spark/Ray RSS peak 4170 MB
+spark_native_bench3 rc=0 wall=99s result=ok | monitor: 91 samples | CPU peak 87% mean 49% | system memory peak 4593 MB | Spark/Ray RSS peak 3817 MB
+spark_python_bench3 rc=0 wall=134s result=ok | monitor: 124 samples | CPU peak 96% mean 49% | system memory peak 5009 MB | Spark/Ray RSS peak 4326 MB
+spark_pandas_bench3 rc=0 wall=105s result=ok | monitor: 98 samples | CPU peak 96% mean 57% | system memory peak 5280 MB | Spark/Ray RSS peak 4762 MB
+ALL DONE
+[02:02:31] starting Ray
+[02:02:48] ray nodes alive: 2
+ray_python_bench1 rc=0 wall=345s result=ok | monitor: 287 samples | CPU peak 99% mean 57% | system memory peak 5529 MB | Spark/Ray RSS peak 9720 MB
+ray_pandas_bench1 rc=0 wall=211s result=ok | monitor: 186 samples | CPU peak 98% mean 52% | system memory peak 5705 MB | Spark/Ray RSS peak 10607 MB
+ray_native_bench1 rc=0 wall=155s result=ok | monitor: 141 samples | CPU peak 82% mean 41% | system memory peak 5640 MB | Spark/Ray RSS peak 10839 MB
+ray_pandas_bench2 rc=0 wall=250s result=ok | monitor: 171 samples | CPU peak 96% mean 37% | system memory peak 5560 MB | Spark/Ray RSS peak 11095 MB
+ray_native_bench2 rc=0 wall=388s result=ok | monitor: 329 samples | CPU peak 96% mean 49% | system memory peak 5660 MB | Spark/Ray RSS peak 11415 MB
+ray_python_bench2 rc=0 wall=391s result=ok | monitor: 344 samples | CPU peak 99% mean 56% | system memory peak 5610 MB | Spark/Ray RSS peak 11683 MB
+ray_native_bench3 rc=0 wall=398s result=ok | monitor: 348 samples | CPU peak 97% mean 56% | system memory peak 5634 MB | Spark/Ray RSS peak 11564 MB
+ray_python_bench3 rc=0 wall=407s result=ok | monitor: 334 samples | CPU peak 99% mean 57% | system memory peak 5664 MB | Spark/Ray RSS peak 11618 MB
+ray_pandas_bench3 rc=0 wall=972s result=ok | monitor: 533 samples | CPU peak 100% mean 68% | system memory peak 5671 MB | Spark/Ray RSS peak 11845 MB
+ALL DONE
+[03:07:01] ALL BENCHMARKS DONE

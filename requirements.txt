@@ -1,0 +1,8 @@
+pyspark==3.5.3
+ray[data,default]==2.59.0
+pandas==2.2.3
+pyarrow==25.0.1
+numpy==2.4.6
+psutil==7.2.2
+matplotlib==3.11.2
+# Python 3.11, Java 17. Spark standalone 3.5.3 binaries are downloaded separately.

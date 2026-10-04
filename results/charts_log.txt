@@ -1,0 +1,18 @@
+| Framework | UDF mode | Runs | Min (s) | Median (s) | Max (s) | CPU peak % | CPU mean % | System memory peak (MB) |
+|---|---|---|---|---|---|---|---|---|
+| spark | python | 3 | 110.9 | 126.5 | 128.2 | 99 | 55 | 5128 |
+| spark | pandas | 3 | 98.8 | 108.8 | 214.1 | 96 | 55 | 5340 |
+| spark | native | 3 | 93.6 | 98.6 | 147.4 | 100 | 55 | 4938 |
+| ray | python | 3 | 341.6 | 381.5 | 396.4 | 99 | 57 | 5664 |
+| ray | pandas | 3 | 205.8 | 246.9 | 965.3 | 100 | 52 | 5705 |
+| ray | native | 3 | 151.8 | 381.3 | 390.2 | 97 | 49 | 5660 |
+spark end-to-end overhead vs native (median): python +27.9s, pandas +10.2s
+ray end-to-end overhead vs native (median): python +0.2s, pandas -134.4s
+chart: charts/e2e_time.png
+stage seconds, Spark: [57.7, 14.5, 41.1, 106.1, 0] Ray: [518.8, 10.4, 36.5, 55.4, 21.2]
+chart: charts/stage_breakdown.png
+UDF-only spark: python 10.2s, pandas 5.4s, native 1.3s | overhead vs native: python +8.9s (714%), pandas +4.2s (332%)
+UDF-only ray: python 2.5s, pandas 2.2s, native 1.2s | overhead vs native: python +1.3s (104%), pandas +1.0s (80%)
+speed_centi sums identical across all 6 mode/framework combinations: True
+chart: charts/udf_micro.png
+chart: charts/cpu_mem_over_time.png

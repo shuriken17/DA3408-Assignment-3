@@ -1,0 +1,1 @@
+monitor: 108 samples | CPU peak 97% mean 51% | system memory peak 4820 MB | Spark/Ray RSS peak 4170 MB

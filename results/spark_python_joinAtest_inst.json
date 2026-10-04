@@ -1,0 +1,32 @@
+{
+  "framework": "spark",
+  "udf_mode": "python",
+  "run_id": "joinAtest_inst",
+  "total_seconds": 103.857,
+  "stages": [
+    {
+      "stage": "ingest",
+      "seconds": 27.616
+    },
+    {
+      "stage": "cleanse",
+      "seconds": 52.849
+    },
+    {
+      "stage": "join_zones",
+      "seconds": 23.258
+    }
+  ],
+  "row_counts": {
+    "after_ingest": 12672737,
+    "after_cleanse": 11698059,
+    "after_join_zones": 11698059
+  },
+  "config": {
+    "master": "spark://127.0.0.1:7077",
+    "shuffle_partitions": 8,
+    "aqe": false,
+    "spark_version": "3.5.3",
+    "instrument": true
+  }
+}
